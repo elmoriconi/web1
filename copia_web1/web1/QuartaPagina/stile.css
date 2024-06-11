@@ -1,0 +1,13 @@
+body {background-color: violet;}
+h1 {color: red;}
+p {
+    text-align: center;
+    color: black;
+} 
+#hp1 {
+    text-align: center;
+    color: yellow;
+}
+.center {
+    text-align: center;
+}

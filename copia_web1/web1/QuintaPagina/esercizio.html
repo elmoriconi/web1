@@ -1,0 +1,212 @@
+<!-- cognome -, nome -, sesso -, indirizzo di residenza -, data di nascita -, luogo di nascita -, tipo di scuola -
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form di registrazione</title>
+        <style>
+            body {
+                margin-left: 30%;
+			    margin-right: 30%;
+                font-family: Arial;
+                font-size: 22px;
+                text-align: center;
+                background: #a9d6bf; 
+            }
+		    p {
+			    text-align: left;
+			    color: red;
+		    } 
+		    #btnid {
+			    text-align: center;		
+    		}
+		
+	    	input[type = submit], input[type = reset] {
+                background-color: orange; 
+			    font-size: 22px;	
+             }		
+        </style>
+    </head>
+    <body>
+        <h1>Modulo di registrazione</h1>
+        <form>
+            <p>
+                <div class="form-group">
+                    <label for="fname">Nome:</label>
+                    <br>
+                    <input type="text" class="form-control" id="fname">
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fcognome">Cognome:</label>
+                    <br>
+                    <input type="text" class="form-control" id="fcognome">
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fgenere">Genere:</label>
+                    <input type="radio" class="form-control" id="fgenere" name="fgenere" value="1">M
+                    <input type="radio" class="form-control" id="fgenere" name="fgenere" value="2">F
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fdata">Data di nascita:</label>
+                    <select class="form-control" id="fdata" name="fdata">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                </div>
+                    </select>
+                    <select name="fdata">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select name="fdata">
+                        <option>1990</option>
+                        <option>1991</option>
+                        <option>1992</option>
+                        <option>1993</option>
+                        <option>1994</option>
+                        <option>1995</option>
+                        <option>1996</option>
+                        <option>1997</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                        <option>2004</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                    </select>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fnascita">Comune di nascita:</label>
+                    <select class="form-control" id="fnascita" name="fnascita">
+                        <option>Roma</option>
+                        <option>Milano</option>
+                        <option>Napoli</option>
+                        <option>Firenze</option>
+                        <option>Bari</option>
+                        <option>Torino</option>
+                        <option>Aosta</option>
+                        <option>Genova</option>
+                        <option>Trento</option>
+                        <option>Venezia</option>
+                        <option>Trieste</option>
+                        <option>Bologna</option>
+                        <option>Ancona</option>
+                        <option>Perugia</option>
+                        <option>L'Aquila</option>
+                        <option>Campobasso</option>
+                        <option>Potenza</option>
+                        <option>Catanzaro</option>
+                        <option>Palermo</option>
+                        <option>Cagliari</option>
+                    </select>
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fresidenza">Comune di residenza:</label>
+                    <select class="form-control" id="fresidenza" name="fresidenza">
+                        <option>Roma</option>
+                        <option>Milano</option>
+                        <option>Napoli</option>
+                        <option>Firenze</option>
+                        <option>Bari</option>
+                        <option>Torino</option>
+                        <option>Aosta</option>
+                        <option>Genova</option>
+                        <option>Trento</option>
+                        <option>Venezia</option>
+                        <option>Trieste</option>
+                        <option>Bologna</option>
+                        <option>Ancona</option>
+                        <option>Perugia</option>
+                        <option>L'Aquila</option>
+                        <option>Campobasso</option>
+                        <option>Potenza</option>
+                        <option>Catanzaro</option>
+                        <option>Palermo</option>
+                        <option>Cagliari</option>
+                    </select>
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fscuola">Tipo di scuola:</label>
+                    <select class="form-control" id="fscuola" name="fscuola">
+                        <option>Liceo</option>
+                        <option>Istituto Professionale</option>
+                        <option>Istituto Tecnico</option>
+                    </select>
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="femail">Email:</label>
+                    <input type="text" class="form-control" id="femail">
+                </div>
+            </p>
+            <input type="submit" value="invia dati">
+        </form>
+    </body>
+</html>
