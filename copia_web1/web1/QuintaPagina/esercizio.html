@@ -29,19 +29,19 @@
     </head>
     <body>
         <h1>Modulo di registrazione</h1>
-        <form>
+        <form action="https://www.booking.com/start.php" method="GET">
             <p>
                 <div class="form-group">
                     <label for="fname">Nome:</label>
                     <br>
-                    <input type="text" class="form-control" id="fname">
+                    <input type="text" class="form-control" id="fname" pattern="^[a-zA-Z]+$">
                 </div>
             </p>
             <p>
                 <div class="form-group">
                     <label for="fcognome">Cognome:</label>
                     <br>
-                    <input type="text" class="form-control" id="fcognome">
+                    <input type="text" class="form-control" id="fcognome" pattern="^[a-zA-Z]+$">
                 </div>
             </p>
             <p>
@@ -204,6 +204,12 @@
                 <div class="form-group">
                     <label for="femail">Email:</label>
                     <input type="text" class="form-control" id="femail">
+                </div>
+            </p>
+            <p>
+                <div class="form-group">
+                    <label for="fcodicefiscale">Codice fiscale:</label>
+                    <input type="text" class="form-control" id="fcodicefiscale" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" required="required">
                 </div>
             </p>
             <input type="submit" value="invia dati">
