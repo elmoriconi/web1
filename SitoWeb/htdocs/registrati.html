@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-color: rgb(224, 172, 75);
+                text-align: center;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title">Registrati</h1>
+        <form action="/gestisciDatiForm" method="GET">
+            <p>
+                <label for="fname">Nome:</label>
+                <br>
+                <input type="text" name="fname">
+            </p>
+            <p>
+                <label for="fcognome">Cognome:</label>
+                <br>
+                <input type="text" name="fcognome">
+            </p>
+            <p>
+                <label for="fgenere">Genere:</label>
+                <input type="radio" name="fgenere" value="1">M
+                <input type="radio" name="fgenere" value="2">F
+            </p>
+            <p>
+                <label for="fcomune">Comune di nascita:</label>
+                <select name="fcomune">
+                    <option>Roma</option>
+                    <option>Milano</option>
+                    <option>Napoli</option>
+                    <option>Firenze</option>
+                    <option>Bari</option>
+                    <option>Torino</option>
+                </select>
+            </p>
+            <input type="submit" value="invia dati">
+        </form>
+    </body>
+</html>
