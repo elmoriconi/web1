@@ -29,3 +29,37 @@ else
     console.log("La f c'è");
 
 
+function TerminaConLettera(sStringa, sTermine)
+{
+    //prendi la lunghezza di sTermine
+    //usa indexOf partendo da lunghezza di sStringa - lunghezza di sTermine
+    //ritorna 0 oppure 1
+    if (sStringa.length < sTermine.length)
+        return 0
+    else
+        var iPos = sStringa.indexOf(sTermine, sStringa.length - sTermine.length);
+        if (iPos == -1)
+            return 0;
+        else
+            return 1;
+}
+
+var sStringa = "giovanni";
+var sTermine = "i";
+bRet = TerminaConLettera(sStringa, sTermine);
+if (bRet == 1)
+    console.log(sStringa + " termina con " + sTermine)
+else
+    console.log(sStringa + " non termina con " + sTermine)
+
+function Macchinetta(iSoldi, sCodiceProdotto)
+{
+if (sCodiceProdotto == "31")
+    if (iSoldi == 1)
+        return {CocaCola, 0:0};
+    if (iSoldi < 1)
+        return {null : null, iSoldi};
+    if (iSoldi > 1)
+        iSoldi = iSoldi - 1
+        return {CocaCola, iSoldi}
+}
