@@ -59,18 +59,34 @@
         document.form.monitor.value = 0
         console.log("Hai premuto il tasto C")
     }
-    function delLast(iNum){
-        if (document.form.monitor.value.length>0)
-            document.form.monitor.value = document.form.monitor.value boh
+    function ar(n) {
+        document.form.oper.value = n;
+        document.form.last.value = document.form.monitor.value;
+        document.form.monitor.value = '';
+        document.form.res.value = '';
+    }
+    function result() {
+        if (document.form.res.value != 'Y') {
+            if (document.form.monitor.value && document.form.oper.value && document.form.last.value) {
+
+                if (document.form.oper.value == 'p')
+                    pitagora(document.form.monitor.value, document.form.last.value );
+                else {
+                    document.form.monitor.value = eval(document.form.last.value + document.form.oper.value + document.form.monitor.value);
+                    document.form.res.value = 'Y';
+                }
+
+            }
+        }
     }
 </script>
- </head >
+</head >
         <body>
             <center>
                 <p>
                 <h1>La mia calcolatrice</h1>
                     <br /><br /><br />
-                    </p>
+                </p>
             <div id="calcolatrice">
                 <form name="form">
                     <input class="area" name="monitor" value="" placeholder="0">
@@ -117,8 +133,6 @@
                     </table>
                 </form>
             </div>
-			
-                </center>
-				
+            </center>
         </body >
-        </html >
+</html >
