@@ -404,14 +404,23 @@
                     }
                     var selectList = document.getElementById("id_com");
                     for (var k in COMUNI) {
-                        if (k[1] == "RM"){
+                        comune = COMUNI[k]
+                        if (comune[1] == "RM"){
                         var option = document.createElement("option");
-                        option.value = k[2];
-                        option.text = k[2];
-                        if (k[2] =="ROMA")
+                        option.value = comune[2];
+                        option.text = comune[2];
+                        if (comune[2] =="ROMA")
                             option.selected=true;
                         selectList.appendChild(option);
                         }
+                    }
+                }
+                function aggiornaComuni(){
+                    var provincia = document.getElementById("id_prov").value;
+                    selectList = document.getElementById("id_com");
+                    while (selectList.firstChild){
+                        selectList.removeChild(selectList.firstChild);
+                    //manca un pezzo
                     }
                 }
                 function VerificaCampi()
@@ -425,6 +434,7 @@
                     if (today < dataInserita)
                     {
                         console.log("Errore");
+                        alert("Attenzione selezionata data non valida")
                         return false;
                     }
                     return true;
@@ -481,7 +491,7 @@
 	<div class="field provincia">
 		<div class="label" required>PROVINCIA (SIGLA)</div>
 		<!--<div class="input"><input type="text" name="prov" maxlength="2" /></div>-->
-        <select id="id_prov" name="prov" required>
+        <select id="id_prov" name="prov" onchange="aggiornaComuni" required>
 
         </select>
 	</div>
