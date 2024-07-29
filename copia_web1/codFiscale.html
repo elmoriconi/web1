@@ -2,6 +2,7 @@
     <head>
         <title>Calcolo Codice Fiscale</title>
         <script src="listaprovince.js"></script>
+        <script src="listacomuni.js"></script>
         <style>
             body {
             margin: 0;
@@ -397,7 +398,20 @@
                         var option = document.createElement("option");
                         option.value = k;
                         option.text = k;
+                        if (k =="RM")
+                            option.selected=true;
                         selectList.appendChild(option);
+                    }
+                    var selectList = document.getElementById("id_com");
+                    for (var k in COMUNI) {
+                        if (k[1] == "RM"){
+                        var option = document.createElement("option");
+                        option.value = k[2];
+                        option.text = k[2];
+                        if (k[2] =="ROMA")
+                            option.selected=true;
+                        selectList.appendChild(option);
+                        }
                     }
                 }
                 function VerificaCampi()
@@ -459,7 +473,9 @@
 	
 	<div class="field luogo">
 		<div class="label" required>LUOGO DI NASCITA</div>
-		<div class="input"><input type="text" name="luogo" /></div>
+		<select id="id_com" name="luogo" required>
+
+        </select>
 	</div>
 	
 	<div class="field provincia">
